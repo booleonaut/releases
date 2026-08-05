@@ -3,13 +3,13 @@
     <channel>
         <title>Booleon</title>
         <item>
-            <title>0.1.2</title>
-            <pubDate>Tue, 04 Aug 2026 23:26:41 +0000</pubDate>
-            <sparkle:version>10002</sparkle:version>
-            <sparkle:shortVersionString>0.1.2</sparkle:shortVersionString>
+            <title>0.1.3</title>
+            <pubDate>Wed, 05 Aug 2026 01:10:59 +0000</pubDate>
+            <sparkle:version>10003</sparkle:version>
+            <sparkle:shortVersionString>0.1.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://raw.githubusercontent.com/AryaJ24/booleon-updates/main/Booleon-0.1.2-macOS.zip" length="3762364" type="application/octet-stream" sparkle:edSignature="jo5ltrkDcuCNyZsduIOeSzxZOI8OMmM0JWgLdze3xthFog+Z5t7v5utQeI43LXejlcvBNjAit5ZfyZpJRTzvAQ=="/>
+            <enclosure url="https://raw.githubusercontent.com/booleonaut/releases/main/Booleon-0.1.3-macOS.zip" length="3762299" type="application/octet-stream" sparkle:edSignature="4Ukrm+JqhP5sBHYMfBeAFDf8jMKHq7N7HXye50I4c9A8ZMDIFMLRLClbJ0oTfGchsCoRaxDJPlA22l6HT/dNBw=="/>
         </item>
     </channel>
 </rss>
