@@ -27,9 +27,10 @@ jobs:
           VERSION="${VERSION%-macOS.zip}"
           TAG="v${VERSION}"
           if gh release view "$TAG" >/dev/null 2>&1; then
-            gh release upload "$TAG" "$ARCHIVE" appcast.xml --clobber
+            gh release delete-asset "$TAG" appcast.xml --yes 2>/dev/null || true
+            gh release upload "$TAG" "$ARCHIVE" --clobber
           else
-            gh release create "$TAG" "$ARCHIVE" appcast.xml \
+            gh release create "$TAG" "$ARCHIVE" \
               --title "Booleon ${VERSION}" \
               --notes "Signed Booleon beta release ${VERSION}. An invite code is required on first launch."
           fi
