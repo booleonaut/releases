@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Booleon</title>
+        <item>
+            <title>0.1.2</title>
+            <pubDate>Tue, 04 Aug 2026 23:26:41 +0000</pubDate>
+            <sparkle:version>10002</sparkle:version>
+            <sparkle:shortVersionString>0.1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://raw.githubusercontent.com/AryaJ24/booleon-updates/main/Booleon-0.1.2-macOS.zip" length="3762364" type="application/octet-stream" sparkle:edSignature="jo5ltrkDcuCNyZsduIOeSzxZOI8OMmM0JWgLdze3xthFog+Z5t7v5utQeI43LXejlcvBNjAit5ZfyZpJRTzvAQ=="/>
+        </item>
+    </channel>
+</rss>
