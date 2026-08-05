@@ -1,0 +1,35 @@
+name: Publish GitHub Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "Booleon-*-macOS.zip"
+      - ".github/workflows/publish-release.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create or update release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ARCHIVE="$(find . -maxdepth 1 -name 'Booleon-*-macOS.zip' -print | sort -V | tail -n 1)"
+          VERSION="${ARCHIVE#./Booleon-}"
+          VERSION="${VERSION%-macOS.zip}"
+          TAG="v${VERSION}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$ARCHIVE" appcast.xml --clobber
+          else
+            gh release create "$TAG" "$ARCHIVE" appcast.xml \
+              --title "Booleon ${VERSION}" \
+              --notes "Signed Booleon beta release ${VERSION}. An invite code is required on first launch."
+          fi
